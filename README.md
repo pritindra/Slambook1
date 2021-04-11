@@ -27,4 +27,4 @@ Steps after extracting the zip file -
   * Finally run `python manage.py runserver` to run the site on your localhost on port 8000.
   * use `python manage.py createsuperuser` to create a super user and then login to the admin panel and enjoy the databases.
 
-### Site is hosted on [Eurymedon Inventory](http://eurymedon.herokuapp.com)
+### Site is hosted on [Eurymedon Slambook-Online](http://eurymedon.herokuapp.com)
