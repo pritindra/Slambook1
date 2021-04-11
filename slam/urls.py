@@ -7,6 +7,6 @@ from slam.views import (
 
 urlpatterns = [
     path('slamlist/<int:user_id>', SlamListView.as_view(), name='slamlist'),
-    path('slamlist/<int:user_id>/<int:slam_id>', SlamMoreInfo.as_view(), name='slamview'),
+    path('slamlist/<int:user_id>/<int:pk>', SlamMoreInfo.as_view(), name='slamview'),
     path('slamlist/slampage', views.slampage, name='slampage')
 ]

@@ -59,13 +59,11 @@
                             </div>
                         </div>
                     </div>
-                    <p class="m-t-15 text-muted">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                    <hr>
-                    <!-- <div class="row justify-content-center user-social-link">
-                        <div class="col-auto"><a href="#!"><i class="fa fa-facebook text-facebook"></i></a></div>
-                        <div class="col-auto"><a href="#!"><i class="fa fa-twitter text-twitter"></i></a></div>
-                        <div class="col-auto"><a href="#!"><i class="fa fa-dribbble text-dribbble"></i></a></div>
-                    </div> -->
+                    {% if request.user.is_authenticated %}
+                    <button class="btn btn-primary" onclick="window.location.href='{% url 'slamview' request.user.id slam.id %}'">Slampage</button>
+                    {% endif %}
+                    <p class="m-t-15 text-muted">{{ slam.lines_for}}.</p>
+                    
                 </div>
             </div>
         </div>

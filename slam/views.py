@@ -55,7 +55,7 @@ class SlamListView(ListView,LoginRequiredMixin):
 
 class SlamMoreInfo(DetailView,LoginRequiredMixin):
     model = Slam
-    template_name = 'interface/more_info.html'
+    template_name = 'slam/slamview.html'
     context_object_name = 'slams'
     def get_context_data(self, **kwargs):
         data = super().get_context_data(**kwargs)

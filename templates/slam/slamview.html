@@ -1,0 +1,61 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Profile</title>
+   <!--Made with love by Mutiullah Samim -->
+   <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	
+	<!--Bootsrap 4 CDN-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+    <!--Fontawesome CDN-->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<!--Custom styles-->
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-4">
+          <div class="list-group" id="list-tab" role="tablist">
+            <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Name</a>
+            <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Nickname</a>
+            <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Birthday</a>
+            <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Zodiac</a>
+            <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-zodiac" role="tab" aria-controls="settings">Zodiac</a>
+            <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-hobbies" role="tab" aria-controls="settings">Hobbies</a>
+            <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-ambition" role="tab" aria-controls="settings">Ambition</a>
+            <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-songs" role="tab" aria-controls="settings">Songs</a>
+            <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-books" role="tab" aria-controls="settings">Books</a>
+            <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-notes" role="tab" aria-controls="settings">Notes on life</a>
+            <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-lines" role="tab" aria-controls="settings">Lines For me</a>
+
+          </div>
+        </div>
+        <div class="col-8">
+          <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">{{ slams.username}}</div>
+            <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">{{ slams.nickname }}</div>
+            <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">{{ slams.birthday }}</div>
+            <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">{{ slams.zodiac }}</div>
+            <div class="tab-pane fade" id="list-zodiac" role="tabpanel" aria-labelledby="list-settings-list">{{ slams.zodiac }}</div>
+            <div class="tab-pane fade" id="list-hobbies" role="tabpanel" aria-labelledby="list-settings-list">{{ slams.hobbies }}</div>
+            <div class="tab-pane fade" id="list-ambition" role="tabpanel" aria-labelledby="list-settings-list">{{ slams.ambition }}</div>
+            <div class="tab-pane fade" id="list-songs" role="tabpanel" aria-labelledby="list-settings-list">{{ slams.songs }}</div>
+            <div class="tab-pane fade" id="list-books" role="tabpanel" aria-labelledby="list-settings-list">{{ slams.books }}</div>
+            <div class="tab-pane fade" id="list-notes" role="tabpanel" aria-labelledby="list-settings-list">{{ slams.notes }}</div>
+            <div class="tab-pane fade" id="list-lines" role="tabpanel" aria-labelledby="list-settings-list">{{ slams.lines_for }}</div>
+        </div>
+        </div>
+      </div>
+
+       
+</div>
+</div>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   
+</body>
+</html>
