@@ -1,6 +1,27 @@
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Profile</title>
+   <!--Made with love by Mutiullah Samim -->
+   <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   
+	<!--Bootsrap 4 CDN-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+    <!--Fontawesome CDN-->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<!--Custom styles-->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/slamlist.css' %}">
+</head>
+<body>
 <div class="container">
     <div class="row">
+        {% for slam in slams %}
         <div class="col-md-4">
             <div class="card user-card">
                 <div class="card-header">
@@ -10,10 +31,10 @@
                     <div class="user-image">
                         <img src="https://bootdey.com/img/Content/avatar/avatar7.png" class="img-radius" alt="User-Profile-Image">
                     </div>
-                    <h6 class="f-w-600 m-t-25 m-b-10">Alessa Robert</h6>
-                    <p class="text-muted">Active | Male | Born 23.05.1992</p>
+                    <h6 class="f-w-600 m-t-25 m-b-10">{{ slam.username }}</h6>
+                    <p class="text-muted">{{ slam.email }} | {{ slam.nickname }}</p>
                     <hr>
-                    <p class="text-muted m-t-15">Activity Level: 87%</p>
+                    <p class="text-muted m-t-15"></p>
                     <ul class="list-unstyled activity-leval">
                         <li class="active"></li>
                         <li class="active"></li>
@@ -25,7 +46,8 @@
                         <div class="row">
                             <div class="col-4">
                                 <i class="fa fa-comment"></i>
-                                <p>1256</p>
+                            
+                                <p>Not yet built</p>
                             </div>
                             <div class="col-4">
                                 <i class="fa fa-user"></i>
@@ -39,107 +61,18 @@
                     </div>
                     <p class="m-t-15 text-muted">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                     <hr>
-                    <div class="row justify-content-center user-social-link">
+                    <!-- <div class="row justify-content-center user-social-link">
                         <div class="col-auto"><a href="#!"><i class="fa fa-facebook text-facebook"></i></a></div>
                         <div class="col-auto"><a href="#!"><i class="fa fa-twitter text-twitter"></i></a></div>
                         <div class="col-auto"><a href="#!"><i class="fa fa-dribbble text-dribbble"></i></a></div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
+        {% endfor %}
         
-        <div class="col-md-4">
-            <div class="card user-card">
-                <div class="card-header">
-                    <h5>Profile</h5>
-                </div>
-                <div class="card-block">
-                    <div class="user-image">
-                        <img src="https://bootdey.com/img/Content/avatar/avatar6.png" class="img-radius" alt="User-Profile-Image">
-                    </div>
-                    <h6 class="f-w-600 m-t-25 m-b-10">Alessa Robert</h6>
-                    <p class="text-muted">Active | Male | Born 23.05.1992</p>
-                    <hr>
-                    <p class="text-muted m-t-15">Activity Level: 87%</p>
-                    <ul class="list-unstyled activity-leval">
-                        <li class="active"></li>
-                        <li class="active"></li>
-                        <li class="active"></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                    <div class="bg-c-green counter-block m-t-10 p-20">
-                        <div class="row">
-                            <div class="col-4">
-                                <i class="fa fa-comment"></i>
-                                <p>1256</p>
-                            </div>
-                            <div class="col-4">
-                                <i class="fa fa-user"></i>
-                                <p>8562</p>
-                            </div>
-                            <div class="col-4">
-                                <i class="fa fa-suitcase"></i>
-                                <p>189</p>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="m-t-15 text-muted">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                    <hr>
-                    <div class="row justify-content-center user-social-link">
-                        <div class="col-auto"><a href="#!"><i class="fa fa-facebook text-facebook"></i></a></div>
-                        <div class="col-auto"><a href="#!"><i class="fa fa-twitter text-twitter"></i></a></div>
-                        <div class="col-auto"><a href="#!"><i class="fa fa-dribbble text-dribbble"></i></a></div>
-                    </div>
-                </div>
-            </div>
-        </div>
         
-        <div class="col-md-4">
-            <div class="card user-card">
-                <div class="card-header">
-                    <h5>Profile</h5>
-                </div>
-                <div class="card-block">
-                    <div class="user-image">
-                        <img src="https://bootdey.com/img/Content/avatar/avatar1.png" class="img-radius" alt="User-Profile-Image">
-                    </div>
-                    <h6 class="f-w-600 m-t-25 m-b-10">Alessa Robert</h6>
-                    <p class="text-muted">Active | Male | Born 23.05.1992</p>
-                    <hr>
-                    <p class="text-muted m-t-15">Activity Level: 87%</p>
-                    <ul class="list-unstyled activity-leval">
-                        <li class="active"></li>
-                        <li class="active"></li>
-                        <li class="active"></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                    <div class="bg-c-yellow counter-block m-t-10 p-20">
-                        <div class="row">
-                            <div class="col-4">
-                                <i class="fa fa-comment"></i>
-                                <p>1256</p>
-                            </div>
-                            <div class="col-4">
-                                <i class="fa fa-user"></i>
-                                <p>8562</p>
-                            </div>
-                            <div class="col-4">
-                                <i class="fa fa-suitcase"></i>
-                                <p>189</p>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="m-t-15 text-muted">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                    <hr>
-                    <div class="row justify-content-center user-social-link">
-                        <div class="col-auto"><a href="#!"><i class="fa fa-facebook text-facebook"></i></a></div>
-                        <div class="col-auto"><a href="#!"><i class="fa fa-twitter text-twitter"></i></a></div>
-                        <div class="col-auto"><a href="#!"><i class="fa fa-dribbble text-dribbble"></i></a></div>
-                    </div>
-                </div>
-            </div>
-        </div>
 	</div>
 </div>
+</body>
+</html>

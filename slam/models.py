@@ -3,12 +3,12 @@ from django.contrib.auth.models import User
 from PIL import Image
 
 class Slam(models.Model):
-    username = models.OneToOneField(User,on_delete=models.CASCADE,default=None)
+    username = models.CharField(max_length=100)
     nickname = models.CharField(max_length=100)
-    petname = models.CharField(max_length=100)
+    petname = models.CharField(max_length=100,default=None,blank=True,null=True)
     email = models.EmailField(max_length=100)
-    birthday = models.DateField()
-    zodiac = models.CharField(max_length=100)
+    birthday = models.DateField(default=None,blank=True,null=True)
+    zodiac = models.CharField(max_length=100,default=None)
     hobbies = models.CharField(max_length=100)
 
     ambition = models.CharField(max_length=100)
@@ -16,7 +16,7 @@ class Slam(models.Model):
     actors = models.CharField(max_length=100)
     songs = models.CharField(max_length=100)
     books = models.CharField(max_length=100)
-    reality_show = models.CharField(max_length=100)
+    reality_show = models.CharField(max_length=100,blank=True,null=True)
     singer = models.CharField(max_length=100)
 
     friends = models.CharField(max_length=100)
@@ -27,9 +27,8 @@ class Slam(models.Model):
     lifeline = models.CharField(max_length=100)
     fear = models.CharField(max_length=100)
     power = models.CharField(max_length=100)
-    movie_role = models.CharField(max_length=100)
     lines_for = models.CharField(max_length=500)
 
-    date = models.DateField()
+    date = models.DateField(auto_now_add=True, blank=True)
 
 

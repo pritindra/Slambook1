@@ -8,7 +8,6 @@ from django.core.validators import RegexValidator
 # Create your models here.
 class UserInfo(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    designation = models.CharField(max_length=50)
     email = models.EmailField(max_length=50)
     addr = models.TextField(max_length=100)
     phone_regex = RegexValidator(regex=r'^\+?1?\d{9,15}$', message="Phone number must be entered in the format: '+999999999'. Up to 15 digits allowed.")

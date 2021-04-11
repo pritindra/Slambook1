@@ -6,6 +6,9 @@ from django.contrib.auth.decorators import login_required
 from django.views.generic import ListView, DetailView
 from django.contrib.auth.mixins import LoginRequiredMixin
 
+def home(request):
+    pass
+
 
 def register(request):
     if request.method == 'POST':
@@ -53,7 +56,7 @@ def signin(request):
         return render(request,'users/signin.html')
 
 class profile(ListView,LoginRequiredMixin):
-    model = UserInfo
+    model = User
     template_name = 'users/profile.html'
     context_object_name = 'user'
     
